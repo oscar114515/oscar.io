@@ -170,20 +170,7 @@
             justify-content: center;
             align-items: center;
         }
-        .about-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0,0,0,0.4);
-            z-index: 1;
-        }
-        .about-card > * {
-            position: relative;
-            z-index: 2;
-        }
+
         .about-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 16px 40px rgba(0,20,40,0.1);
@@ -196,12 +183,12 @@
         .about-card .card-title {
             font-size: 1.2rem;
             font-weight: 700;
-            color: #ffffff;
+            color: #0b1b33;
             margin-bottom: 10px;
         }
         .about-card .card-desc {
             font-size: 0.9rem;
-            color: #f0f0f0;
+            color: #4a6a8e;
             line-height: 1.6;
         }
         .about-card.minecraft { background: linear-gradient(135deg, #2d5016 0%, #4a7c23 100%); color: white; }
