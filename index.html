@@ -170,17 +170,7 @@
             justify-content: center;
             align-items: center;
         }
-        .about-card::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 40%;
-            background: linear-gradient(to top, rgba(255,255,255,0.95), rgba(255,255,255,0));
-            border-radius: 0 0 20px 20px;
-            pointer-events: none;
-        }
+
 
         .about-card:hover {
             transform: translateY(-5px);
@@ -196,11 +186,17 @@
             font-weight: 700;
             color: #0b1b33;
             margin-bottom: 10px;
+            background: rgba(255,255,255,0.85);
+            padding: 4px 12px;
+            border-radius: 8px;
         }
         .about-card .card-desc {
             font-size: 0.9rem;
             color: #4a6a8e;
             line-height: 1.6;
+            background: rgba(255,255,255,0.75);
+            padding: 4px 12px;
+            border-radius: 8px;
         }
         .about-card.minecraft { background: linear-gradient(135deg, #2d5016 0%, #4a7c23 100%); color: white; }
         .about-card.minecraft .card-title,
