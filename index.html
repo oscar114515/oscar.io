@@ -102,13 +102,13 @@
             border: 3px solid #ffffff; box-shadow: 0 8px 24px rgba(0,0,0,0.08);
             margin-bottom: 20px;
         }
-        .hero h1 { font-size: 3rem; font-weight: 600; color: #0b1b33; letter-spacing: -0.02em; margin-bottom: 8px; }
+        .hero h1 { font-size: 3rem; font-weight: 600; color: #ffffff; letter-spacing: -0.02em; margin-bottom: 8px; }
         .hero h1 .highlight {
             background: linear-gradient(135deg, #0066cc, #4a90d9);
             -webkit-background-clip: text; -webkit-text-fill-color: transparent;
             background-clip: text;
         }
-        .hero .subtitle { font-size: 1.15rem; color: #4a6a8e; font-weight: 400; margin-bottom: 30px; letter-spacing: 0.3px; }
+        .hero .subtitle { font-size: 1.15rem; color: #f0f0f0; font-weight: 400; margin-bottom: 30px; letter-spacing: 0.3px; }
         .hero .divider { width: 60px; height: 3px; background: linear-gradient(90deg, #0066cc, #4a90d9); border-radius: 10px; margin: 0 auto 30px; }
 
         .platform-grid { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; margin-bottom: 10px; }
@@ -142,7 +142,7 @@
         }
         .site-card:hover { transform: translateY(-5px); box-shadow: 0 16px 40px rgba(0,20,40,0.08); border-color: #d0dcec; }
         .site-card .emoji { font-size: 2.2rem; display: block; margin-bottom: 12px; }
-        .site-card .name { font-size: 1rem; font-weight: 600; color: #0b1b33; margin-bottom: 4px; }
+        .site-card .name { font-size: 1rem; font-weight: 600; color: #ffffff; margin-bottom: 4px; }
         .site-card .desc { font-size: 0.8rem; color: #6a7e9b; font-weight: 400; }
         .site-card .badge { display: inline-block; margin-top: 10px; padding: 2px 12px; border-radius: 30px; font-size: 0.6rem; font-weight: 600; letter-spacing: 0.5px; background: #e6edf8; color: #2c4a7a; }
         .site-card .badge.new { background: #0066cc; color: white; }
@@ -160,6 +160,27 @@
             border: 1px solid #eef2f7;
             box-shadow: 0 4px 16px rgba(0,0,0,0.04);
             transition: all 0.25s ease;
+            position: relative;
+            overflow: hidden;
+            min-height: 180px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .about-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.45);
+            z-index: 1;
+        }
+        .about-card > * {
+            position: relative;
+            z-index: 2;
         }
         .about-card:hover {
             transform: translateY(-5px);
@@ -173,12 +194,12 @@
         .about-card .card-title {
             font-size: 1.2rem;
             font-weight: 700;
-            color: #0b1b33;
+            color: #ffffff;
             margin-bottom: 10px;
         }
         .about-card .card-desc {
             font-size: 0.9rem;
-            color: #4a6a8e;
+            color: #f0f0f0;
             line-height: 1.6;
         }
         .about-card.minecraft { background: linear-gradient(135deg, #2d5016 0%, #4a7c23 100%); color: white; }
